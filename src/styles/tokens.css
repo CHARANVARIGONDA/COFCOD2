@@ -1,0 +1,55 @@
+:root {
+  /* Architectural Obsidian & Surface Palette */
+  --bg: #070707;
+  --bg-deep: #040404;
+  --surface: #0F0F0F;
+  --surface-2: #151515;
+  --surface-3: #1C1C1C;
+
+  /* Precision Architectural Grid Lines */
+  --line: #222222;
+  --line-strong: #333333;
+  --line-brass: rgba(212, 175, 55, 0.45);
+  --line-brass-dim: rgba(212, 175, 55, 0.2);
+
+  /* High-Contrast Typography */
+  --text: #F8F8F8;
+  --text-dim: #B0B0B0;
+  --text-muted: #707070;
+
+  /* Metallic Brass & Gold Accents */
+  --gold: #D4AF37;
+  --gold-bright: #F5DE88;
+  --gold-brass: #C29B38;
+  --gold-surface: rgba(212, 175, 55, 0.08);
+
+  /* Character Discipline Accents */
+  --char-arjun: #5B8DB8;
+  --char-arjun-text: #8FC1E8;
+  --char-bheema: #A0704A;
+  --char-bheema-text: #D4A57E;
+  --char-karna: #D98324;
+  --char-karna-text: #FFAA4D;
+  --char-sita: #EFE6D2;
+  --char-sita-text: #FFFFFF;
+  --char-draupadi: #C25A6E;
+  --char-draupadi-text: #E87A90;
+  --char-savitri: #8A8F3C;
+  --char-savitri-text: #B4B952;
+
+  /* Typography Families */
+  --font-display: 'Barlow Condensed', -apple-system, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+
+  /* Layout Geometry */
+  --container-max: 1380px;
+  --container-padding: clamp(20px, 4vw, 56px);
+  --section-spacing: clamp(80px, 12vw, 160px);
+  --nav-height: 60px;
+  --radius-sharp: 0px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-card: 12px;
+  --radius-pill: 9999px;
+}

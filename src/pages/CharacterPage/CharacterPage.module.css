@@ -1,0 +1,205 @@
+.charHeader {
+  padding: clamp(60px, 8vw, 100px) 0 40px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line-brass);
+}
+
+.topBreadcrumb {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.headerGrid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .headerGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.emblemBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: var(--surface);
+  border: 1px solid var(--char-accent, var(--gold));
+  color: var(--char-accent, var(--gold));
+  margin-bottom: 1rem;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 8rem);
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.35rem, 2.5vw, 2.2rem);
+  color: var(--gold-bright);
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.cueQuote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.15rem, 2vw, 1.6rem);
+  color: #FFFFFF;
+  line-height: 1.4;
+  border-left: 3px solid var(--char-accent, var(--gold));
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+/* Side Spec Box */
+.sideSpecBox {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sideHeading {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.5rem;
+}
+
+.specRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.specLabel {
+  font-family: var(--font-display);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.specVal {
+  font-size: 0.875rem;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+
+/* Philosophy Section */
+.storySection {
+  padding: var(--section-spacing) 0;
+  background: #040404;
+  border-bottom: 1px solid var(--line);
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+@media (max-width: 800px) {
+  .storyGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.colHeading {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.bodyText {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--text-dim);
+}
+
+/* Linked Capsules */
+.capsulesSection {
+  padding: var(--section-spacing) 0;
+}
+
+.capsulesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 720px) {
+  .capsulesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Other Archetypes Directory */
+.directorySection {
+  padding: 60px 0;
+  background: #040404;
+  border-top: 1px solid var(--line);
+}
+
+.directoryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.dirCard {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: all 0.08s ease;
+}
+
+.dirCard:hover {
+  background: var(--surface-2);
+  border-color: var(--gold);
+}
+
+.dirName {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #FFFFFF;
+}
+
+.dirTitle {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+}

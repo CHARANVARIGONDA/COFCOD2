@@ -1,0 +1,161 @@
+.capsulesSection {
+  padding: var(--section-spacing) 0;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.filterBar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.filterBtn {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: all 0.08s ease;
+}
+
+.filterBtn:hover {
+  background: var(--surface-2);
+  color: #FFFFFF;
+}
+
+.filterBtn.activeFilter {
+  background: var(--gold);
+  color: #070707;
+  border-color: var(--gold);
+}
+
+.capsulesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1080px) {
+  .capsulesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .capsulesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Manifesto Section */
+.manifestoSection {
+  padding: var(--section-spacing) 0;
+  background: #040404;
+  border-bottom: 1px solid var(--line);
+}
+
+.manifestoGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 6vw, 5rem);
+}
+
+@media (max-width: 840px) {
+  .manifestoGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.manifestoHeading {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  font-weight: 900;
+  color: #FFFFFF;
+  line-height: 0.95;
+  margin: 0 0 1.5rem 0;
+}
+
+.manifestoText {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.35rem;
+  color: #E0E0E0;
+  line-height: 1.5;
+  margin: 0 0 1.5rem 0;
+}
+
+.pillarsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pillarRow {
+  display: flex;
+  gap: 1.25rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.pillarRow:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.pillarIndex {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--gold-bright);
+}
+
+.pillarTitle {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  margin: 0 0 0.35rem 0;
+}
+
+.pillarDesc {
+  font-size: 0.875rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+  margin: 0;
+}

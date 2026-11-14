@@ -1,0 +1,69 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.875rem;
+  line-height: 1;
+  padding: 0 1.75rem;
+  min-height: 48px;
+  border-radius: var(--radius-pill, 9999px);
+  transition: all 0.15s ease;
+  position: relative;
+  user-select: none;
+}
+
+.button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* Primary Brass Gold */
+.primary {
+  background: var(--gold);
+  color: #070707;
+  border: 1px solid var(--gold-bright);
+}
+
+.primary:hover:not(:disabled) {
+  background: var(--gold-bright);
+}
+
+/* Stark Outline */
+.outline {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--line-strong);
+}
+
+.outline:hover:not(:disabled) {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: var(--gold-surface);
+}
+
+/* Dark Technical Surface */
+.surface {
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--line);
+}
+
+.surface:hover:not(:disabled) {
+  background: var(--surface-3);
+  border-color: var(--text-dim);
+}
+
+.small {
+  min-height: 38px;
+  padding: 0 1rem;
+  font-size: 0.75rem;
+}
+
+.fullWidth {
+  width: 100%;
+}

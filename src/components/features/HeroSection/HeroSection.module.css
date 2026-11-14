@@ -1,0 +1,362 @@
+.hero {
+  position: relative;
+  padding: clamp(90px, 11vw, 120px) 0 clamp(40px, 6vw, 60px);
+  background: #070707;
+  border-bottom: 1px solid var(--line-strong);
+  overflow: hidden;
+}
+
+.heroBackdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: grayscale(100%) contrast(1.22) brightness(0.35);
+}
+
+.heroGradientOverlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 50% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 65%),
+    linear-gradient(180deg, 
+      rgba(7, 7, 7, 0.72) 0%, 
+      rgba(7, 7, 7, 0.55) 30%, 
+      rgba(7, 7, 7, 0.88) 70%, 
+      #070707 100%);
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: clamp(1.75rem, 3.5vw, 2.75rem);
+}
+
+.metadataPill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: var(--radius-pill);
+  padding: 0.3rem 0.75rem;
+}
+
+.livePulse {
+  width: 6px;
+  height: 6px;
+  background: var(--gold-bright);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--gold-bright);
+}
+
+.indexCode {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--gold-bright);
+  text-transform: uppercase;
+}
+
+.locationCode {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 640px) {
+  .locationCode {
+    display: none;
+  }
+}
+
+.mainTypographyBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 9.5vw, 9.8rem);
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  margin: 0;
+  max-width: 1200px;
+}
+
+.goldAccent {
+  color: var(--gold-bright);
+}
+
+.editorialSubline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.2rem, 2.2vw, 1.85rem);
+  color: #D4D4D4;
+  max-width: 820px;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.ctaRow {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* 6-Column Rich Interactive Character Archetype Showcase */
+.archetypesStrip {
+  border-top: 1px solid var(--line-brass);
+  padding-top: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.stripHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.stripLabelGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.stripBadge {
+  background: var(--gold);
+  color: #070707;
+  font-family: var(--font-display);
+  font-size: 0.6875rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 2px;
+}
+
+.stripLabel {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.stripSub {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.archetypesGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.85rem;
+}
+
+@media (max-width: 1200px) {
+  .archetypesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .archetypesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.archetypeCard {
+  background: linear-gradient(180deg, #131313 0%, #090909 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1.25rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.95rem;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.archetypeCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--char-accent, var(--gold));
+  opacity: 0.25;
+  transition: opacity 0.22s ease, height 0.22s ease;
+}
+
+.archetypeCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--char-accent, var(--gold));
+  background: linear-gradient(180deg, #1A1A1A 0%, #0D0D0D 100%);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.85), 0 0 24px var(--char-glow);
+}
+
+.archetypeCard:hover::before {
+  opacity: 1;
+  height: 3px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardIndex {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+}
+
+.cardEmblem {
+  color: var(--char-accent, var(--gold));
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.archetypeCard:hover .cardEmblem {
+  transform: scale(1.18);
+  filter: drop-shadow(0 0 8px var(--char-accent));
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.cardName {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  transition: color 0.2s ease;
+}
+
+.archetypeCard:hover .cardName {
+  color: var(--char-text-accent, #FFFFFF);
+}
+
+.cardTitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.8125rem;
+  color: #B4B4B4;
+  line-height: 1.2;
+}
+
+.cardDiscipline {
+  margin-top: 0.35rem;
+}
+
+.cardDiscipline span {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--char-text-accent, var(--gold-light));
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-pill);
+  padding: 0.2rem 0.55rem;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.archetypeCard:hover .cardDiscipline span {
+  border-color: var(--char-accent);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.cardCue {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: #888888;
+  margin: 0.35rem 0 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.2s ease;
+}
+
+.archetypeCard:hover .cardCue {
+  color: #C0C0C0;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.65rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.exploreText {
+  font-family: var(--font-display);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.exploreArrow {
+  font-size: 0.875rem;
+  color: var(--text-dim);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.archetypeCard:hover .exploreText {
+  color: var(--gold-bright);
+}
+
+.archetypeCard:hover .exploreArrow {
+  color: var(--gold-bright);
+  transform: translateX(4px);
+}
