@@ -1,10 +1,22 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { CHARACTERS, CharacterEmblem, BRAND_IMAGES } from '@cofoco/shared';
 import { Button } from '../../ui/Button/Button';
 import styles from './HeroSection.module.css';
 
 export const HeroSection: React.FC = () => {
+  const navigate = useNavigate();
+
+  // Preload hero images on mount
+  useEffect(() => {
+    CHARACTERS.forEach((char) => {
+      if (char.heroImage) {
+        const img = new Image();
+        img.src = char.heroImage;
+      }
+    });
+  }, []);
+
   return (
     <section className={styles.hero} aria-label="Architectural Hero Overview">
       {/* Cinematic Gym Atmosphere Backdrop */}
@@ -64,6 +76,7 @@ export const HeroSection: React.FC = () => {
               <Link
                 key={char.slug}
                 to={`/characters/${char.slug}`}
+                onClick={() => navigate(`/characters/${char.slug}`)}
                 className={styles.archetypeCard}
                 style={
                   {
