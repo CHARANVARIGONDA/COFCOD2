@@ -420,6 +420,15 @@
   margin-bottom: 1.75rem;
 }
 
+@media (max-width: 768px) {
+  .chartRibbon {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+    padding: 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
 .ribbonItem {
   display: flex;
   flex-direction: column;
@@ -451,6 +460,10 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .yAxisGuideLines {
@@ -465,11 +478,23 @@
   z-index: 0;
 }
 
+@media (max-width: 768px) {
+  .yAxisGuideLines {
+    height: 195px;
+  }
+}
+
 .gridLine {
   display: flex;
   align-items: center;
   gap: 0.65rem;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .gridLine {
+    gap: 0.35rem;
+  }
 }
 
 .axisLabel {
@@ -479,6 +504,13 @@
   color: #666;
   min-width: 45px;
   text-align: right;
+}
+
+@media (max-width: 768px) {
+  .axisLabel {
+    min-width: 28px;
+    font-size: 0.52rem;
+  }
 }
 
 .dashedLine {
@@ -496,10 +528,21 @@
   height: 300px;
   padding: 1rem 0.5rem 0.5rem 55px;
   gap: 0.45rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .barsGrid {
+    height: 230px;
+    padding: 1rem 0.15rem 0.5rem 34px;
+    gap: 2px;
+  }
 }
 
 .barColumn {
   flex: 1;
+  min-width: 0 !important;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -522,6 +565,12 @@
   align-items: flex-end;
   justify-content: center;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .barTrack {
+    max-width: 100%;
+  }
 }
 
 .barPillar {
@@ -574,14 +623,31 @@
   letter-spacing: 0.04em;
   color: var(--text-dim);
   transition: color 0.15s ease;
+  text-align: center;
+  line-height: 1;
+}
+
+.xLabelFull {
+  display: inline;
   white-space: nowrap;
+}
+
+.xLabelCompact {
+  display: none;
 }
 
 @media (max-width: 768px) {
   .xLabel {
-    font-size: 0.55rem;
-    transform: rotate(-45deg);
-    transform-origin: top left;
+    font-size: 0.52rem;
+    margin-top: 0.35rem;
+    letter-spacing: 0;
+  }
+  .xLabelFull {
+    display: none;
+  }
+  .xLabelCompact {
+    display: inline-block;
+    font-weight: 800;
   }
 }
 

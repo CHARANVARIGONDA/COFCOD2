@@ -355,7 +355,8 @@ export const AnalyticsPage: React.FC = () => {
                       </div>
 
                       <span className={`${styles.xLabel} ${isActive ? styles.xLabelActive : ''}`}>
-                        {d.dayLabel}
+                        <span className={styles.xLabelFull}>{d.dayLabel}</span>
+                        <span className={styles.xLabelCompact}>{d.dayLabel.split(' ')[0]}</span>
                       </span>
                     </div>
                   );

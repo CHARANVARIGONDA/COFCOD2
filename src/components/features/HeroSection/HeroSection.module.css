@@ -22,6 +22,12 @@
   filter: grayscale(100%) contrast(1.22) brightness(0.35);
 }
 
+@media (max-width: 768px) {
+  .heroImage {
+    object-position: 50% 30%;
+  }
+}
+
 .heroGradientOverlay {
   position: absolute;
   inset: 0;
